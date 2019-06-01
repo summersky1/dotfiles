@@ -88,8 +88,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# Change ls color from blue
-LS_COLORS=$LS_COLORS:'di=36'
+# Change ls colors
+# di = directory, ex = executable file
+LS_COLORS=$LS_COLORS:'di=36:ex=32'
 export LS_COLORS
 
 # colored GCC warnings and errors
