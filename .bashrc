@@ -129,7 +129,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Show system info on login
+# 'apt install screenfetch' to install
 screenfetch
 
+# rbenv config
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
