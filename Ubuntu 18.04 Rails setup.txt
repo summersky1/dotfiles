@@ -1,0 +1,35 @@
+AWS Ubuntu 18.04
+
+# Create new user
+
+1. Create/add ssh keys for github
+
+2. Pull dotfiles
+git init
+git remote add origin git_repo_ssh
+git branch --set-upstream-to=origin/master master
+git pull
+
+3. Update respositories
+sudo apt-get update
+
+4. Install screenfetch to display system info on ssh login
+sudo apt-get install screenfetch
+
+# Install dependencies for Ruby install
+sudo apt-get install -y build-essential libssl-dev libreadline-dev zlib1g-dev
+
+# Install rbenv
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+
+# Install Ruby
+rbenv install --list
+rbenv install x.x.x
+rbenv global x.x.x
+
+# Database clients
+sudo apt-get install -y libmysqlclient-dev libsqlite3-dev
+sudo apt-get install -y mysql-client (optional)
+
+# Nginx
+sudo apt install nginx
