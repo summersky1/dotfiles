@@ -1,0 +1,51 @@
+upstream puma {
+  server unix:///path_to_app/shared/tmp/sockets/puma.sock;
+}
+
+server {
+  listen 443 ssl default_server;
+  server_name domain_name;
+
+  ssl_certificate /etc/letsencrypt/live/domain_name/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/domain_name/privkey.pem;
+
+  root /path_to_app/current/public;
+  access_log /path_to_app/current/log/nginx.access.log;
+  error_log /path_to_app/current/log/nginx.error.log info;
+
+  location ^~ /assets/ {
+    gzip_static on;
+    expires max;
+    add_header Cache-Control public;
+  }
+
+  try_files $uri/index.html $uri @puma;
+  location @puma {
+    proxy_redirect off;
+
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Ssl on;
+    proxy_set_header X-Forwarded-Port $server_port;
+    proxy_set_header X-Forwarded-Host $host;
+
+    proxy_pass http://puma;
+  }
+
+  error_page 500 502 503 504 /500.html;
+  client_max_body_size 10M;
+  keepalive_timeout 10;
+}
+
+# generic redirect 80 to 443
+server {
+  listen 80 default_server;
+  server_name _;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  server_name www.domain_name;
+  return 301 $scheme://domain_name$request_uri;
+}
