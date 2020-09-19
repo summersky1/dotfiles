@@ -1,0 +1,29 @@
+{
+    "workbench.colorTheme": "Default Light+",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Source Code Pro",
+    "editor.renderWhitespace": "none",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorBlinking": true,
+    "[ruby]": {
+        "editor.tabSize": 2
+    },
+    "[slim]": {
+        "editor.tabSize": 2
+    },
+    "[scss]": {
+        "editor.tabSize": 2
+    },
+    "ruby.format": "rubocop",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "solargraph.useBundler": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.tabSizing": "shrink",
+    "vsicons.dontShowNewVersionMessage": true,
+}
