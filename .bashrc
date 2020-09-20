@@ -123,6 +123,9 @@ fi
 # 'apt install screenfetch' to install
 screenfetch
 
+# needed for GPG signing
+export GPG_TTY=$(tty)
+
 # rbenv config
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
