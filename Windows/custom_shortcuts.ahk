@@ -9,3 +9,5 @@ CapsLock::Send ^{Space}
 !k::Send {Down}
 !l::Send {Right}
 !i::Send {Up}
+
+Pause::Send {Media_Play_Pause}
