@@ -104,3 +104,9 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# needed for GPG signing
+export GPG_TTY=$(tty)
+
+# show system info at start of terminal session, requires install
+neofetch
