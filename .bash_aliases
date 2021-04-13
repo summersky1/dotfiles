@@ -14,3 +14,7 @@ alias gds='git diff --staged'
 
 # Ruby
 alias be='bundle exec'
+
+# Python
+alias py='python'
+alias pyms='python manage.py runserver'
