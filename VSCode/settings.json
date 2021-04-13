@@ -1,12 +1,15 @@
 {
-    "workbench.colorTheme": "Default Light+",
-    "editor.fontSize": 16,
     "editor.fontFamily": "Source Code Pro",
     "editor.renderWhitespace": "none",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.formatOnSave": true,
+    "editor.smoothScrolling": true,
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    "editor.fontSize": 15,
+    "terminal.integrated.fontSize": 15,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.cursorBlinking": true,
     "[ruby]": {
@@ -18,12 +21,29 @@
     "[scss]": {
         "editor.tabSize": 2
     },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 2
+    },
     "ruby.format": "rubocop",
+    "solargraph.useBundler": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "solargraph.useBundler": true,
     "workbench.iconTheme": "vscode-icons",
     "workbench.editor.enablePreview": false,
     "workbench.editor.tabSizing": "shrink",
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "workbench.colorTheme": "Monokai",
     "vsicons.dontShowNewVersionMessage": true,
+    "diffEditor.renderSideBySide": false,
+    "java.configuration.checkProjectSettingsExclusions": false,
 }
