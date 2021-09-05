@@ -1,0 +1,20 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+/* leave icon for folders */
+#personal-bookmarks .bookmark-item:not([container=true]) .toolbarbutton-icon {
+    display:none!important;
+    /* filter: grayscale(100%); */
+}
+
+#personal-bookmarks .bookmark-item {
+    min-width: 90px;
+    /* font-size: 13px; */
+}
+
+#TabsToolbar {
+    height: 32px !important;
+}
+
+.tabbrowser-tab {
+    margin-top: -3px !important;
+}
